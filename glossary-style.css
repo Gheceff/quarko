@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav .logo {
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav ul li a.active,
+.nav ul li a:hover,
+.nav ul li a:focus {
+    background-color: #f4f4f4;
+}
+
+span {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+span:hover {
+    background-color: darkblue;
+}
+
+.glossary-content {
+    padding-top: 100px; /* space for fixed header */
+    padding-bottom: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.glossary-content h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.glossary-terms dl {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.glossary-terms dt {
+    font-weight: bold;
+    color: blueviolet;
+    margin: 10px 0;
+}
+
+.glossary-terms dd {
+    margin: 0 0 20px 20px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav ul li a {
+        margin-bottom: 5px;
+    }
+
+    .glossary-content {
+        padding: 20px;
+    }
+}
+.search-container {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1rem;
+}
+
+#search-glossary {
+    padding: 10px 15px;
+    width: 40%; /* Set the width as per your layout */
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#search-glossary:focus {
+    outline: none;
+    border-color: blueviolet;
+    box-shadow: 0 2px 5px rgba(138, 43, 226, 0.5);
+}
+
+.search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-button:hover {
+    background-color: darkviolet;
+    box-shadow: 0 2px 5px rgba(138, 43, 226, 0.5);
+}
+
+/* Keeping the responsive nature of the design */
+@media (max-width: 768px) {
+    #glossary-search {
+        width: 80%; /* Adapt the width for smaller screens */
+    }
+}
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #333;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropdown-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content button {
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+
+.dropdown-content button:hover {
+    background-color: darkviolet;
+}
